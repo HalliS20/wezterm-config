@@ -22,10 +22,15 @@ M.keys = {
 		mods = 'CMD',
 		action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
 	},
-	-- Switch tabs with CMD+SHIFT+H/L
+	-- Switch tabs with CMD+SHIFT+H/L or left and right arrow
 	{
 		key = 'h',
 		mods = 'CMD|SHIFT',
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
+	{
+		key = "LeftArrow",
+		mods = "CMD|SHIFT",
 		action = wezterm.action.ActivateTabRelative(-1),
 	},
 	{
@@ -33,6 +38,11 @@ M.keys = {
 		mods = 'CMD|SHIFT',
 		action = wezterm.action.ActivateTabRelative(1),
 	},
+	{
+		key = 'RightArrow',
+		mods = 'CMD|SHIFT',
+		action = wezterm.action.ActivateTabRelative(1),
+	}
 }
 
 return M

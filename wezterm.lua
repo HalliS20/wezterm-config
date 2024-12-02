@@ -1,4 +1,3 @@
--- File: ~/.config/wezterm/wezterm.lua
 local wezterm = require('wezterm')
 
 -- Import other configuration files
@@ -25,4 +24,3 @@ end
 config.scrollback_lines = 10000
 
 return config
-
